@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		02ACC54321A73E7EA34CAD0D /* Pods_DrawRightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8C4A604B4E52C384B4C3E /* Pods_DrawRightUITests.framework */; };
+		1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */; };
+		1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BA962203A236000039DA /* PlayAreaViewController.swift */; };
 		1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5332202BAA2003E10F8 /* AppDelegate.swift */; };
-		1784D5362202BAA2003E10F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5352202BAA2003E10F8 /* ViewController.swift */; };
 		1784D5392202BAA2003E10F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1784D5372202BAA2003E10F8 /* Main.storyboard */; };
 		1784D53B2202BAA3003E10F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1784D53A2202BAA3003E10F8 /* Assets.xcassets */; };
 		1784D53E2202BAA3003E10F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1784D53C2202BAA3003E10F8 /* LaunchScreen.storyboard */; };
@@ -39,9 +40,10 @@
 /* Begin PBXFileReference section */
 		0FE14BF119E401B5C7E7A33D /* Pods-DrawRight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRight.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight.release.xcconfig"; sourceTree = "<group>"; };
 		11D76448C1D92EE2F8E3846A /* Pods-DrawRightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightUITests/Pods-DrawRightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingResultViewController.swift; sourceTree = "<group>"; };
+		1775BA962203A236000039DA /* PlayAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAreaViewController.swift; sourceTree = "<group>"; };
 		1784D5302202BAA2003E10F8 /* DrawRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1784D5332202BAA2003E10F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1784D5352202BAA2003E10F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1784D5382202BAA2003E10F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1784D53A2202BAA3003E10F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1784D53D2202BAA3003E10F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,12 +116,13 @@
 		1784D5322202BAA2003E10F8 /* DrawRight */ = {
 			isa = PBXGroup;
 			children = (
+				1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */,
 				1784D5332202BAA2003E10F8 /* AppDelegate.swift */,
-				1784D5352202BAA2003E10F8 /* ViewController.swift */,
 				1784D5372202BAA2003E10F8 /* Main.storyboard */,
 				1784D53A2202BAA3003E10F8 /* Assets.xcassets */,
 				1784D53C2202BAA3003E10F8 /* LaunchScreen.storyboard */,
 				1784D53F2202BAA3003E10F8 /* Info.plist */,
+				1775BA962203A236000039DA /* PlayAreaViewController.swift */,
 			);
 			path = DrawRight;
 			sourceTree = "<group>";
@@ -391,7 +394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1784D5362202BAA2003E10F8 /* ViewController.swift in Sources */,
+				1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */,
+				1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */,
 				1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
