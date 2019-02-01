@@ -17,12 +17,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
+                                <rect key="frame" x="44" y="0.0" width="724" height="354"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Begin Image" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-Rg-cLy" userLabel="Begin Image">
+                                        <rect key="frame" x="200.66666666666663" y="61" width="763" height="232"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="232" id="C1t-s7-D9S"/>
+                                            <constraint firstAttribute="width" constant="763" id="zvZ-5i-QOQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerX" secondItem="FYN-ka-pZn" secondAttribute="centerX" constant="220" id="yGM-BT-nKd"/>
+                                    <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerY" secondItem="FYN-ka-pZn" secondAttribute="centerY" id="zMr-RV-6FO"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AmB-el-uc1" appends="YES" id="cLJ-sx-nmo"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FYN-ka-pZn" secondAttribute="bottom" id="1Yh-cD-fic"/>
+                            <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-OS-P3X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="jh0-nS-EEJ"/>
+                            <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n4m-D1-2Z1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="UL9-6s-bk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="AmB-el-uc1">
+                    <connections>
+                        <action selector="swipeGestureRecognizer:" destination="BYZ-38-t0r" id="RpN-yl-NuJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="110.83743842364532" y="117.59999999999999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Begin Image" width="763" height="232"/>
+    </resources>
 </document>
