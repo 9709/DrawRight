@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-a0-VLK" userLabel="Next Player Button">
-                                <rect key="frame" x="734" y="393.66666666666669" width="25" height="25"/>
+                                <rect key="frame" x="175" y="753" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ORd-Tp-352"/>
                                     <constraint firstAttribute="width" constant="25" id="qu3-20-zLW"/>
@@ -27,29 +27,30 @@
                                 <state key="normal" title="Button" image="Next Player Arrow"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-GX-L4D" userLabel="Drawing Pallet View">
-                                <rect key="frame" x="0.0" y="44" width="724" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="724" height="690"/>
                                 <subviews>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Tigger Line">
-                                        <rect key="frame" x="679" y="0.0" width="45" height="375"/>
+                                        <rect key="frame" x="331" y="0.0" width="45" height="690"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="375" id="VCD-Jv-zdW"/>
+                                            <constraint firstAttribute="height" constant="690" id="VCD-Jv-zdW"/>
                                             <constraint firstAttribute="width" constant="45" id="y9g-xq-uhN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" id="oAL-7t-o2c"/>
+                                    <constraint firstAttribute="height" constant="690" id="hrs-Jz-8NQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" constant="348" id="oAL-7t-o2c"/>
                                     <constraint firstItem="PsL-Ok-f3T" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="top" id="tlg-u8-6e9"/>
                                     <constraint firstAttribute="width" constant="724" id="ytu-1Y-bPl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="690"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Begin Image" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-Rg-cLy" userLabel="Begin Image">
-                                        <rect key="frame" x="26" y="251" width="763" height="232"/>
+                                        <rect key="frame" x="26" y="250" width="763" height="232"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="232" id="C1t-s7-D9S"/>
                                             <constraint firstAttribute="width" constant="763" id="zvZ-5i-QOQ"/>
@@ -59,8 +60,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="690" id="qsZ-an-FV9"/>
                                     <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerX" secondItem="FYN-ka-pZn" secondAttribute="centerX" constant="220" id="yGM-BT-nKd"/>
-                                    <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerY" secondItem="FYN-ka-pZn" secondAttribute="centerY" id="zMr-RV-6FO"/>
+                                    <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerY" secondItem="FYN-ka-pZn" secondAttribute="centerY" constant="21" id="zMr-RV-6FO"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="AmB-el-uc1" appends="YES" id="cLJ-sx-nmo"/>
@@ -69,13 +71,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0yK-YW-xdr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FYN-ka-pZn" secondAttribute="bottom" id="1Yh-cD-fic"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qcx-GX-L4D" secondAttribute="bottom" id="8e4-Xi-Oar"/>
+                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-OS-P3X"/>
-                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="leading" secondItem="Qcx-GX-L4D" secondAttribute="trailing" constant="10" id="XOC-wh-ZK3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="jh0-nS-EEJ"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n4m-D1-2Z1"/>
                         </constraints>
@@ -92,7 +92,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="110.83743842364532" y="117.59999999999999"/>
+            <point key="canvasLocation" x="109.59999999999999" y="117.48768472906404"/>
         </scene>
     </scenes>
     <resources>
