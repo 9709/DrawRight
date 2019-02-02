@@ -18,6 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-fK-G8x">
+                                <rect key="frame" x="142.66666666666666" y="753" width="90" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ZbS-cx-JgJ"/>
+                                    <constraint firstAttribute="width" constant="90" id="gw6-bP-QEF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="COMPLETE"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-a0-VLK" userLabel="Next Player Button">
                                 <rect key="frame" x="175" y="753" width="25" height="25"/>
                                 <constraints>
@@ -25,6 +34,9 @@
                                     <constraint firstAttribute="width" constant="25" id="qu3-20-zLW"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Next Player Arrow"/>
+                                <connections>
+                                    <action selector="nextPlayerArrowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Th-wm-MCe"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-GX-L4D" userLabel="Drawing Pallet View">
                                 <rect key="frame" x="0.0" y="44" width="724" height="690"/>
@@ -73,16 +85,21 @@
                         <constraints>
                             <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-OS-P3X"/>
+                            <constraint firstItem="KaS-fK-G8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwN-wN-QPp"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="jh0-nS-EEJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" id="kGL-Ah-X6K"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n4m-D1-2Z1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="UL9-6s-bk4"/>
+                        <outlet property="completeButton" destination="KaS-fK-G8x" id="EjU-1E-T9Y"/>
+                        <outlet property="drawingPalletView" destination="Qcx-GX-L4D" id="XQc-N8-mzZ"/>
+                        <outlet property="nextPlayerButton" destination="Jwn-a0-VLK" id="tzw-Fd-gIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
