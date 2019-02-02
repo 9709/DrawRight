@@ -26,6 +26,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="COMPLETE"/>
+                                <connections>
+                                    <action selector="completeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="90B-zn-CfE"/>
+                                    <segue destination="ut4-Hr-RAK" kind="show" identifier="toResultPageSegue" animates="NO" id="Qdr-Yc-gvD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-a0-VLK" userLabel="Next Player Button">
                                 <rect key="frame" x="175" y="753" width="25" height="25"/>
@@ -39,23 +43,21 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-GX-L4D" userLabel="Drawing Pallet View">
-                                <rect key="frame" x="0.0" y="44" width="724" height="690"/>
-                                <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Tigger Line">
-                                        <rect key="frame" x="331" y="0.0" width="45" height="690"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="690" id="VCD-Jv-zdW"/>
-                                            <constraint firstAttribute="width" constant="45" id="y9g-xq-uhN"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="44" width="750" height="699"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Trailing Tigger Line">
+                                <rect key="frame" x="330" y="44" width="45" height="699"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="690" id="hrs-Jz-8NQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" constant="348" id="oAL-7t-o2c"/>
-                                    <constraint firstItem="PsL-Ok-f3T" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="top" id="tlg-u8-6e9"/>
-                                    <constraint firstAttribute="width" constant="724" id="ytu-1Y-bPl"/>
+                                    <constraint firstAttribute="width" constant="45" id="y9g-xq-uhN"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="An8-al-9dz" userLabel="Leading Tigger Line">
+                                <rect key="frame" x="0.0" y="44" width="45" height="699"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="7On-8w-cOs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
@@ -83,15 +85,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" id="979-QG-Hra"/>
                             <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
+                            <constraint firstItem="KaS-fK-G8x" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="bottom" constant="10" id="H7S-ZC-Gjt"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-OS-P3X"/>
                             <constraint firstItem="KaS-fK-G8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwN-wN-QPp"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="VbO-oG-3hG"/>
+                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="cXP-bS-sV0"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="jh0-nS-EEJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" id="kGL-Ah-X6K"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n4m-D1-2Z1"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qEn-ZK-lUh"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0A-KC-7Y2"/>
+                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2" id="w8L-dL-2Jr"/>
+                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xvg-Bl-Lqr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -99,7 +109,9 @@
                         <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="UL9-6s-bk4"/>
                         <outlet property="completeButton" destination="KaS-fK-G8x" id="EjU-1E-T9Y"/>
                         <outlet property="drawingPalletView" destination="Qcx-GX-L4D" id="XQc-N8-mzZ"/>
+                        <outlet property="leadingTriggerLine" destination="An8-al-9dz" id="slI-oC-Dpi"/>
                         <outlet property="nextPlayerButton" destination="Jwn-a0-VLK" id="tzw-Fd-gIt"/>
+                        <outlet property="trailingTriggerLine" destination="PsL-Ok-f3T" id="QU1-6U-EDG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,6 +122,21 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="117.48768472906404"/>
+        </scene>
+        <!--Drawing Result View Controller-->
+        <scene sceneID="bKG-SG-Gch">
+            <objects>
+                <viewController id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvW-dZ-zOs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eOU-4b-7jM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftv-Ld-11A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="114"/>
         </scene>
     </scenes>
     <resources>

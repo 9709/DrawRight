@@ -17,12 +17,20 @@ class PlayAreaViewController: UIViewController {
     
     @IBOutlet weak var completeButton: UIButton!
     
+    @IBOutlet weak var trailingTriggerLine: UIView!
+    
+    @IBOutlet weak var leadingTriggerLine: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.nextPlayerButton.isHidden = true
         self.completeButton.isHidden = true
+        self.trailingTriggerLine.isHidden = true
+        self.leadingTriggerLine.isHidden = true
+
+        
 
     }
     @IBAction func swipeGestureRecognizer(_ sender: UISwipeGestureRecognizer) {
@@ -34,6 +42,8 @@ class PlayAreaViewController: UIViewController {
                        completion: { (animateComplete: Bool) -> Void in
                         if animateComplete {
                             self.nextPlayerButton.isHidden = false
+                            self.trailingTriggerLine.isHidden = false
+
                             self.beginButtonContainterView.removeFromSuperview()
                         }
                         })
@@ -48,10 +58,16 @@ class PlayAreaViewController: UIViewController {
                         if animateToPlayer2Complete {
                             self.nextPlayerButton.isHidden = true
                             self.completeButton.isHidden = false
+                            self.trailingTriggerLine.isHidden = true
+                            self.leadingTriggerLine.isHidden = false
+
                         }
         })
     }
     
+    @IBAction func completeButton(_ sender: UIButton) {
+        
+    }
     
     
 }
