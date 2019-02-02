@@ -10,7 +10,6 @@
 		02ACC54321A73E7EA34CAD0D /* Pods_DrawRightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8C4A604B4E52C384B4C3E /* Pods_DrawRightUITests.framework */; };
 		1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */; };
 		1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BA962203A236000039DA /* PlayAreaViewController.swift */; };
-		1775BA992203A547000039DA /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BA982203A547000039DA /* DrawingCanvasView.swift */; };
 		1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5332202BAA2003E10F8 /* AppDelegate.swift */; };
 		1784D5392202BAA2003E10F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1784D5372202BAA2003E10F8 /* Main.storyboard */; };
 		1784D53B2202BAA3003E10F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1784D53A2202BAA3003E10F8 /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		1784D5492202BAA3003E10F8 /* DrawRightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5482202BAA3003E10F8 /* DrawRightTests.swift */; };
 		1784D5542202BAA3003E10F8 /* DrawRightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5532202BAA3003E10F8 /* DrawRightUITests.swift */; };
 		C49455275473455449C0DE91 /* Pods_DrawRightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAEBE07EC3CA88E546A225C /* Pods_DrawRightTests.framework */; };
+		C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */; };
 		CF43C524DC27652070737AC6 /* Pods_DrawRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,6 @@
 		11D76448C1D92EE2F8E3846A /* Pods-DrawRightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightUITests/Pods-DrawRightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingResultViewController.swift; sourceTree = "<group>"; };
 		1775BA962203A236000039DA /* PlayAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAreaViewController.swift; sourceTree = "<group>"; };
-		1775BA982203A547000039DA /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
 		1784D5302202BAA2003E10F8 /* DrawRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1784D5332202BAA2003E10F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1784D5382202BAA2003E10F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +59,9 @@
 		2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9731FD83CEFE5527CA46EA /* Pods-DrawRightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightTests/Pods-DrawRightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B8C4A604B4E52C384B4C3E /* Pods_DrawRightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87DBD4B22052C7A004E7DF9 /* DrawRight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawRight-Bridging-Header.h"; sourceTree = "<group>"; };
+		C87DBD4C22052C7B004E7DF9 /* DrawingCanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingCanvasView.h; sourceTree = "<group>"; };
+		C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvasView.m; sourceTree = "<group>"; };
 		DAAEBE07EC3CA88E546A225C /* Pods_DrawRightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4201057F930D0D5EC499AC7 /* Pods-DrawRight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight.debug.xcconfig"; sourceTree = "<group>"; };
 		F0D0EC91E01D556E5102C664 /* Pods-DrawRightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightTests/Pods-DrawRightTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,13 +121,15 @@
 			isa = PBXGroup;
 			children = (
 				1775BA962203A236000039DA /* PlayAreaViewController.swift */,
-				1775BA982203A547000039DA /* DrawingCanvasView.swift */,
+				C87DBD4C22052C7B004E7DF9 /* DrawingCanvasView.h */,
+				C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */,
 				1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */,
 				1784D5332202BAA2003E10F8 /* AppDelegate.swift */,
 				1784D5372202BAA2003E10F8 /* Main.storyboard */,
 				1784D53A2202BAA3003E10F8 /* Assets.xcassets */,
 				1784D53C2202BAA3003E10F8 /* LaunchScreen.storyboard */,
 				1784D53F2202BAA3003E10F8 /* Info.plist */,
+				C87DBD4B22052C7A004E7DF9 /* DrawRight-Bridging-Header.h */,
 			);
 			path = DrawRight;
 			sourceTree = "<group>";
@@ -243,6 +247,7 @@
 				TargetAttributes = {
 					1784D52F2202BAA2003E10F8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					1784D5432202BAA3003E10F8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -398,8 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */,
-				1775BA992203A547000039DA /* DrawingCanvasView.swift in Sources */,
 				1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */,
+				C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */,
 				1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,16 +581,19 @@
 			baseConfigurationReference = E4201057F930D0D5EC499AC7 /* Pods-DrawRight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3GKR9NFG3;
+				DEVELOPMENT_TEAM = 9X7754242C;
 				INFOPLIST_FILE = DrawRight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawRight/DrawRight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -596,16 +604,18 @@
 			baseConfigurationReference = 0FE14BF119E401B5C7E7A33D /* Pods-DrawRight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3GKR9NFG3;
+				DEVELOPMENT_TEAM = 9X7754242C;
 				INFOPLIST_FILE = DrawRight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawRight/DrawRight-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
