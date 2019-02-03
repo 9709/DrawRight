@@ -16,6 +16,8 @@
 		1784D53E2202BAA3003E10F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1784D53C2202BAA3003E10F8 /* LaunchScreen.storyboard */; };
 		1784D5492202BAA3003E10F8 /* DrawRightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5482202BAA3003E10F8 /* DrawRightTests.swift */; };
 		1784D5542202BAA3003E10F8 /* DrawRightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D5532202BAA3003E10F8 /* DrawRightUITests.swift */; };
+		17D96604220585C500454739 /* TitleSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D96603220585C500454739 /* TitleSwipeViewController.swift */; };
+		17D966062206531C00454739 /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D966052206531C00454739 /* AnimatedTransitioning.swift */; };
 		C49455275473455449C0DE91 /* Pods_DrawRightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAEBE07EC3CA88E546A225C /* Pods_DrawRightTests.framework */; };
 		C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */; };
 		CF43C524DC27652070737AC6 /* Pods_DrawRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */; };
@@ -56,6 +58,8 @@
 		1784D5532202BAA3003E10F8 /* DrawRightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRightUITests.swift; sourceTree = "<group>"; };
 		1784D5552202BAA3003E10F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17AEBFFC749EA9284DFEF21B /* Pods-DrawRightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightUITests/Pods-DrawRightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		17D96603220585C500454739 /* TitleSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSwipeViewController.swift; sourceTree = "<group>"; };
+		17D966052206531C00454739 /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9731FD83CEFE5527CA46EA /* Pods-DrawRightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightTests/Pods-DrawRightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B8C4A604B4E52C384B4C3E /* Pods_DrawRightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,9 +124,12 @@
 		1784D5322202BAA2003E10F8 /* DrawRight */ = {
 			isa = PBXGroup;
 			children = (
+				17D96603220585C500454739 /* TitleSwipeViewController.swift */,
 				1775BA962203A236000039DA /* PlayAreaViewController.swift */,
 				C87DBD4C22052C7B004E7DF9 /* DrawingCanvasView.h */,
 				C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */,
+				17D966052206531C00454739 /* AnimatedTransitioning.swift */,
+				1775BA982203A547000039DA /* DrawingCanvasView.swift */,
 				1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */,
 				1784D5332202BAA2003E10F8 /* AppDelegate.swift */,
 				1784D5372202BAA2003E10F8 /* Main.storyboard */,
@@ -402,7 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D96604220585C500454739 /* TitleSwipeViewController.swift in Sources */,
 				1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */,
+				17D966062206531C00454739 /* AnimatedTransitioning.swift in Sources */,
+				1775BA992203A547000039DA /* DrawingCanvasView.swift in Sources */,
 				1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */,
 				C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */,
 				1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */,

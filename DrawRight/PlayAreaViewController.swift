@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PlayAreaViewController: UIViewController {
-    @IBOutlet weak var beginButtonContainterView: UIView!
-    
+
+
+class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDelegate  {
     @IBOutlet weak var drawingPalletView: UIView!
     
     @IBOutlet weak var nextPlayerButton: UIButton!
@@ -22,53 +22,44 @@ class PlayAreaViewController: UIViewController {
     @IBOutlet weak var leadingTriggerLine: UIView!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nextPlayerButton.isHidden = true
+        self.transitioningDelegate = self
+        
         self.completeButton.isHidden = true
-        self.trailingTriggerLine.isHidden = true
         self.leadingTriggerLine.isHidden = true
-
-        
-
     }
-    @IBAction func swipeGestureRecognizer(_ sender: UISwipeGestureRecognizer) {
-        
-        UIView.animate(withDuration: 1.0,
-                       animations: { () -> Void in
-                        self.beginButtonContainterView.bounds = CGRect(x: 1080, y: 0, width: self.beginButtonContainterView.bounds.width, height: self.beginButtonContainterView.bounds.height)
-                        },
-                       completion: { (animateComplete: Bool) -> Void in
-                        if animateComplete {
-                            self.nextPlayerButton.isHidden = false
-                            self.trailingTriggerLine.isHidden = false
-
-                            self.beginButtonContainterView.removeFromSuperview()
-                        }
-                        })
-    }
+    
     
     @IBAction func nextPlayerArrowButton(_ sender: UIButton) {
         UIView.animate(withDuration: 1.0,
                        animations: { () -> Void in
                         self.drawingPalletView.frame = CGRect(x: -331, y: 50, width: self.drawingPalletView.frame.width, height: self.drawingPalletView.frame.height)
-                        },
+        },
                        completion: { (animateToPlayer2Complete: Bool) -> Void in
                         if animateToPlayer2Complete {
                             self.nextPlayerButton.isHidden = true
                             self.completeButton.isHidden = false
                             self.trailingTriggerLine.isHidden = true
                             self.leadingTriggerLine.isHidden = false
-
                         }
         })
     }
     
+    // Complete button ================================
     @IBAction func completeButton(_ sender: UIButton) {
-        
     }
+
     
-    
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
+                
+        return animatedTransitioning
+    }
 }
 
