@@ -11,7 +11,7 @@ import UIKit
 
 
 class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDelegate  {
-    @IBOutlet weak var drawingPalletView: UIView!
+    @IBOutlet weak var drawingPalletView: DrawingCanvasView!
     
     @IBOutlet weak var nextPlayerButton: UIButton!
     
@@ -53,6 +53,13 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     @IBAction func completeButton(_ sender: UIButton) {
     }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toResultPageSegue" {
+      if let destinationViewController = segue.destination as? DrawingResultViewController {
+        destinationViewController.finishedImage = self.drawingPalletView.drawings()
+      }
+    }
+  }
     
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

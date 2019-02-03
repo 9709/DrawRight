@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DrawingCanvasView : UIView
 
 @property (nonatomic, assign) CGFloat lineWidth;
-@property (nonatomic, assign) CGFloat edgeSnapThreshold;
+
+- (UIImage *)drawings;
 
 @end
 

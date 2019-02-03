@@ -46,7 +46,6 @@ const CGFloat kDefaultLineWidth = 10.0f;
 }
 
 - (void)configure {
-  
   // set the default values for the public properties
   self.lineWidth = kDefaultLineWidth;
   
@@ -57,23 +56,19 @@ const CGFloat kDefaultLineWidth = 10.0f;
 
 
 - (void)drawRect:(CGRect)rect {
-
   [self draw];
 }
 
-- (void)draw
-{
+- (void)draw {
   CGContextRef context = UIGraphicsGetCurrentContext();
   
   CGContextAddPath(context, path);
   CGContextSetLineCap(context, kCGLineCapRound);
   CGContextSetLineWidth(context, self.lineWidth);
-  CGContextSetBlendMode(context, kCGBlendModeNormal);
   CGContextStrokePath(context);
 }
 
-- (UIImage *)drawings
-{
+- (UIImage *)drawings {
   UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
   
   [self draw];
@@ -83,27 +78,24 @@ const CGFloat kDefaultLineWidth = 10.0f;
   return image;
 }
 
-- (void)finishDrawing
-{
-  // clear the current tool
-//  self.currentTool = nil;
+- (UIImage *)image {
+  UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0.0);
+  [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return image;
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-  
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   // add the first touch
   UITouch *touch = [touches anyObject];
   previousPoint1 = [touch previousLocationInView:self];
   currentPoint = [touch locationInView:self];
-  
-  if (self.edgeSnapThreshold > 0) {
-    [self snapCurrentPointToEdges];
-  }
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
   // save all the touches in the path
   UITouch *touch = [touches anyObject];
   
@@ -111,30 +103,10 @@ const CGFloat kDefaultLineWidth = 10.0f;
   previousPoint1 = [touch previousLocationInView:self];
   currentPoint = [touch locationInView:self];
   
-  if (self.edgeSnapThreshold > 0) {
-    [self snapCurrentPointToEdges];
-  }
+  [self addPathPreviousPreviousPoint:previousPoint2 withPreviousPoint:previousPoint1 withCurrentPoint:currentPoint];
   
-  CGRect bounds = [self addPathPreviousPreviousPoint:previousPoint2 withPreviousPoint:previousPoint1 withCurrentPoint:currentPoint];
-
-  CGRect drawBox = bounds;
-  drawBox.origin.x -= self.lineWidth * 2.0;
-  drawBox.origin.y -= self.lineWidth * 2.0;
-  drawBox.size.width += self.lineWidth * 4.0;
-  drawBox.size.height += self.lineWidth * 4.0;
-
-  [self setNeedsDisplayInRect:drawBox];
+  [self setNeedsDisplay];
   
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-  [self finishDrawing];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-  [self finishDrawing];
 }
 
 - (CGRect)addPathPreviousPreviousPoint:(CGPoint)p2Point withPreviousPoint:(CGPoint)p1Point withCurrentPoint:(CGPoint)cpoint {
@@ -152,43 +124,7 @@ const CGFloat kDefaultLineWidth = 10.0f;
   return bounds;
 }
 
-- (void)snapCurrentPointToEdges
-{
-  int xMax = self.frame.size.width;
-  int yMax = self.frame.size.height;
-  
-  if (currentPoint.x < self.edgeSnapThreshold) {
-    currentPoint.x = 0;
-    
-  } else if (currentPoint.x > xMax - self.edgeSnapThreshold) {
-    currentPoint.x = xMax;
-  }
-  
-  if (currentPoint.y < self.edgeSnapThreshold) {
-    currentPoint.y = 0;
-    
-  } else if (currentPoint.y > yMax - self.edgeSnapThreshold) {
-    currentPoint.y = yMax;
-  }
-}
-
-- (UIImage *)image
-{
-  UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0.0);
-  [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  
-  return image;
-}
-
-- (void)clear
-{
-  [self setNeedsDisplay];
-}
-
-- (void)dealloc
-{
+- (void)dealloc {
   CGPathRelease(path);
 }
 

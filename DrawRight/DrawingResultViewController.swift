@@ -9,13 +9,17 @@
 import UIKit
 
 class DrawingResultViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-    @IBAction func startOverButton(_ sender: UIButton) {
-    }
-
+  
+  var finishedImage: UIImage?
+  
+  @IBOutlet weak var finishedImageView: UIImageView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    finishedImageView.image = finishedImage
+  }
+  
+  @IBAction func startOverButton(_ sender: UIButton) {
+  }
+  
 }
