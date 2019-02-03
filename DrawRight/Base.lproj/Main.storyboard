@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHw-tz-qQ0">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,18 +13,17 @@
         <!--Play Area View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PlayAreaViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="playAreaViewController" id="BYZ-38-t0r" customClass="PlayAreaViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-fK-G8x">
-                                <rect key="frame" x="142.66666666666666" y="753" width="90" height="25"/>
+                                <rect key="frame" x="118" y="753" width="139" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ZbS-cx-JgJ"/>
-                                    <constraint firstAttribute="width" constant="90" id="gw6-bP-QEF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
                                 <state key="normal" title="COMPLETE"/>
                                 <connections>
                                     <action selector="completeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="90B-zn-CfE"/>
@@ -60,6 +59,84 @@
                                     <constraint firstAttribute="width" constant="45" id="7On-8w-cOs"/>
                                 </constraints>
                             </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" id="979-QG-Hra"/>
+                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
+                            <constraint firstItem="KaS-fK-G8x" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="bottom" constant="10" id="H7S-ZC-Gjt"/>
+                            <constraint firstItem="KaS-fK-G8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwN-wN-QPp"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="VbO-oG-3hG"/>
+                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="cXP-bS-sV0"/>
+                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
+                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" id="kGL-Ah-X6K"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qEn-ZK-lUh"/>
+                            <constraint firstItem="An8-al-9dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0A-KC-7Y2"/>
+                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2" id="w8L-dL-2Jr"/>
+                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xvg-Bl-Lqr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wVP-ng-BV5"/>
+                    <connections>
+                        <outlet property="completeButton" destination="KaS-fK-G8x" id="EjU-1E-T9Y"/>
+                        <outlet property="drawingPalletView" destination="Qcx-GX-L4D" id="XQc-N8-mzZ"/>
+                        <outlet property="leadingTriggerLine" destination="An8-al-9dz" id="slI-oC-Dpi"/>
+                        <outlet property="nextPlayerButton" destination="Jwn-a0-VLK" id="tzw-Fd-gIt"/>
+                        <outlet property="trailingTriggerLine" destination="PsL-Ok-f3T" id="QU1-6U-EDG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="117.48768472906404"/>
+        </scene>
+        <!--Drawing Result View Controller-->
+        <scene sceneID="bKG-SG-Gch">
+            <objects>
+                <viewController id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvW-dZ-zOs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-Qv-pzB" userLabel="Save button">
+                                <rect key="frame" x="106" y="613" width="163" height="43"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
+                                <state key="normal" title="SAVE PHOTO"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-SZ-7ui" userLabel="Start over button">
+                                <rect key="frame" x="107" y="538" width="161" height="43"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
+                                <state key="normal" title="START OVER"/>
+                                <connections>
+                                    <action selector="startOverButton:" destination="ut4-Hr-RAK" eventType="touchUpInside" id="dbm-dO-r69"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startOverSegue" animates="NO" id="bDo-LL-8jV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7wF-Qv-pzB" firstAttribute="top" secondItem="9o0-SZ-7ui" secondAttribute="bottom" constant="32" id="4wf-W8-53e"/>
+                            <constraint firstItem="9o0-SZ-7ui" firstAttribute="centerX" secondItem="FvW-dZ-zOs" secondAttribute="centerX" id="Of3-XR-9yK"/>
+                            <constraint firstItem="eOU-4b-7jM" firstAttribute="bottom" secondItem="7wF-Qv-pzB" secondAttribute="bottom" constant="122" id="cSN-X7-qH5"/>
+                            <constraint firstItem="7wF-Qv-pzB" firstAttribute="centerX" secondItem="FvW-dZ-zOs" secondAttribute="centerX" id="gj2-tH-mbJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eOU-4b-7jM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftv-Ld-11A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234" y="117"/>
+        </scene>
+        <!--Title Swipe View Controller-->
+        <scene sceneID="Zul-cO-0TJ">
+            <objects>
+                <viewController id="qHw-tz-qQ0" customClass="TitleSwipeViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uAl-mP-l0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="690"/>
                                 <subviews>
@@ -79,68 +156,37 @@
                                     <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerY" secondItem="FYN-ka-pZn" secondAttribute="centerY" constant="21" id="zMr-RV-6FO"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AmB-el-uc1" appends="YES" id="cLJ-sx-nmo"/>
+                                    <outletCollection property="gestureRecognizers" destination="64U-sf-0qE" appends="YES" id="rrC-7x-73C"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" id="979-QG-Hra"/>
-                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
-                            <constraint firstItem="KaS-fK-G8x" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="bottom" constant="10" id="H7S-ZC-Gjt"/>
-                            <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-OS-P3X"/>
-                            <constraint firstItem="KaS-fK-G8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwN-wN-QPp"/>
-                            <constraint firstItem="An8-al-9dz" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="VbO-oG-3hG"/>
-                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="cXP-bS-sV0"/>
-                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
-                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="jh0-nS-EEJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" id="kGL-Ah-X6K"/>
-                            <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n4m-D1-2Z1"/>
-                            <constraint firstItem="An8-al-9dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qEn-ZK-lUh"/>
-                            <constraint firstItem="An8-al-9dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0A-KC-7Y2"/>
-                            <constraint firstItem="Qcx-GX-L4D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2" id="w8L-dL-2Jr"/>
-                            <constraint firstItem="PsL-Ok-f3T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xvg-Bl-Lqr"/>
+                            <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="uAl-mP-l0Z" secondAttribute="leading" id="1X6-Tz-Lug"/>
+                            <constraint firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="5f8-m0-ZQU"/>
+                            <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="lid-MR-tkE" secondAttribute="top" id="S6h-sO-Cu0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="lid-MR-tkE"/>
                     </view>
                     <connections>
-                        <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="UL9-6s-bk4"/>
-                        <outlet property="completeButton" destination="KaS-fK-G8x" id="EjU-1E-T9Y"/>
-                        <outlet property="drawingPalletView" destination="Qcx-GX-L4D" id="XQc-N8-mzZ"/>
-                        <outlet property="leadingTriggerLine" destination="An8-al-9dz" id="slI-oC-Dpi"/>
-                        <outlet property="nextPlayerButton" destination="Jwn-a0-VLK" id="tzw-Fd-gIt"/>
-                        <outlet property="trailingTriggerLine" destination="PsL-Ok-f3T" id="QU1-6U-EDG"/>
+                        <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="Qhj-NQ-7jV"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="AmB-el-uc1">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bv3-p4-DKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="64U-sf-0qE">
                     <connections>
-                        <action selector="swipeGestureRecognizer:" destination="BYZ-38-t0r" id="RpN-yl-NuJ"/>
+                        <action selector="swipeTitleToStartGame:" destination="qHw-tz-qQ0" id="pV3-7u-zNo"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="117.48768472906404"/>
-        </scene>
-        <!--Drawing Result View Controller-->
-        <scene sceneID="bKG-SG-Gch">
-            <objects>
-                <viewController id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FvW-dZ-zOs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="eOU-4b-7jM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ftv-Ld-11A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="952" y="114"/>
+            <point key="canvasLocation" x="82" y="117"/>
         </scene>
     </scenes>
     <resources>
         <image name="Begin Image" width="763" height="232"/>
         <image name="Next Player Arrow" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bDo-LL-8jV"/>
+    </inferredMetricsTieBreakers>
 </document>
