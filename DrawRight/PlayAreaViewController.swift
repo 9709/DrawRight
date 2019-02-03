@@ -57,9 +57,8 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        let animatedTransitioning = AnimatedTransitioning()
-        
-        animatedTransitioning.phoneHeight = self.view.frame.height
+        let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
+                
         return animatedTransitioning
     }
 }

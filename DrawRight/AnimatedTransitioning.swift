@@ -10,7 +10,14 @@ import UIKit
 
 class AnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
-    var phoneHeight: CGFloat?
+    var phoneHeight: CGFloat
+    var phoneWidth: CGFloat
+    
+    init(phoneHeight: CGFloat, phoneWidth: CGFloat) {
+        self.phoneHeight = phoneHeight
+        self.phoneWidth = phoneWidth
+        super.init()
+    }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 1.0
@@ -26,8 +33,8 @@ class AnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
         
         transitionContext.containerView.addSubview(myToViewController.view)
 
-        let startingFrame = CGRect(x: 380, y: 0, width: 375, height: phoneHeight!)
-        let endFrame = CGRect(x: 0, y: 0, width: 375, height: phoneHeight!)
+        let startingFrame = CGRect(x: phoneWidth + 5, y: 0, width: phoneWidth, height: phoneHeight)
+        let endFrame = CGRect(x: 0, y: 0, width: phoneWidth, height: phoneHeight)
        
         
         myToViewController.view.frame = startingFrame
