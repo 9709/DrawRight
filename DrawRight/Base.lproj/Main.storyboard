@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHw-tz-qQ0">
-    <device id="ipad12_9rounded" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-fK-G8x">
-                                <rect key="frame" x="442.5" y="1311" width="139" height="25"/>
+                                <rect key="frame" x="442.5" y="1331" width="139" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ZbS-cx-JgJ"/>
                                 </constraints>
@@ -31,10 +31,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-a0-VLK" userLabel="Next Player Button">
-                                <rect key="frame" x="499.5" y="1311" width="25" height="25"/>
+                                <rect key="frame" x="493" y="1321" width="38" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="ORd-Tp-352"/>
-                                    <constraint firstAttribute="width" constant="25" id="qu3-20-zLW"/>
+                                    <constraint firstAttribute="width" secondItem="Jwn-a0-VLK" secondAttribute="height" multiplier="1:1" id="P5q-LG-Yjo"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Next Player Arrow"/>
                                 <connections>
@@ -42,18 +41,18 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-GX-L4D" userLabel="Drawing Pallet View" customClass="DrawingCanvasView">
-                                <rect key="frame" x="0.0" y="24" width="2003" height="1277"/>
+                                <rect key="frame" x="0.0" y="20" width="2003" height="1301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Trailing Tigger Line">
-                                <rect key="frame" x="979" y="24" width="45" height="1277"/>
+                                <rect key="frame" x="979" y="20" width="45" height="1301"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="y9g-xq-uhN"/>
                                 </constraints>
                             </view>
                             <view userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="An8-al-9dz" userLabel="Leading Tigger Line">
-                                <rect key="frame" x="0.0" y="24" width="45" height="1277"/>
+                                <rect key="frame" x="0.0" y="20" width="45" height="1301"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="7On-8w-cOs"/>
@@ -62,15 +61,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="bottom" id="1Ze-sk-Iqa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsL-Ok-f3T" secondAttribute="trailing" id="979-QG-Hra"/>
-                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYk-Eh-11G"/>
+                            <constraint firstItem="Jwn-a0-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A36-vn-Wb7"/>
                             <constraint firstItem="KaS-fK-G8x" firstAttribute="top" secondItem="Qcx-GX-L4D" secondAttribute="bottom" constant="10" id="H7S-ZC-Gjt"/>
                             <constraint firstItem="KaS-fK-G8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwN-wN-QPp"/>
                             <constraint firstItem="An8-al-9dz" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="VbO-oG-3hG"/>
                             <constraint firstItem="PsL-Ok-f3T" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="cXP-bS-sV0"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" constant="10" id="iM3-oU-Vmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" constant="7" id="iM3-oU-Vmg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" constant="10" id="kGL-Ah-X6K"/>
                             <constraint firstItem="An8-al-9dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qEn-ZK-lUh"/>
                             <constraint firstItem="An8-al-9dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0A-KC-7Y2"/>
@@ -150,10 +150,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
-                                <rect key="frame" x="0.0" y="24" width="1024" height="1272"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1296"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Begin Image" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-Rg-cLy" userLabel="Begin Image">
-                                        <rect key="frame" x="350.5" y="541" width="763" height="232"/>
+                                        <rect key="frame" x="350.5" y="553" width="763" height="232"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="232" id="C1t-s7-D9S"/>
                                             <constraint firstAttribute="width" constant="763" id="zvZ-5i-QOQ"/>
@@ -199,6 +199,6 @@
         <image name="Next Player Arrow" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DX0-sp-saP"/>
+        <segue reference="Qdr-Yc-gvD"/>
     </inferredMetricsTieBreakers>
 </document>
