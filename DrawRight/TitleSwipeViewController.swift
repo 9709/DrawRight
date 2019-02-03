@@ -35,7 +35,7 @@ class TitleSwipeViewController: UIViewController {
         
         UIView.animate(withDuration: 1.0,
                        animations: { () -> Void in
-                        self.beginButtonContainterView.bounds = CGRect(x: 1080, y: 0, width: self.beginButtonContainterView.bounds.width, height: self.beginButtonContainterView.bounds.height)
+                        self.beginButtonContainterView.bounds = CGRect(x: 1100, y: 0, width: self.beginButtonContainterView.bounds.width, height: self.beginButtonContainterView.bounds.height)
         },
                        completion: { (animateComplete: Bool) -> Void in
                         if animateComplete {

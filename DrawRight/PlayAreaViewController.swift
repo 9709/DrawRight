@@ -35,12 +35,15 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     
     
     @IBAction func nextPlayerArrowButton(_ sender: UIButton) {
+      let oldTrailingTriggerLineXValue = self.trailingTriggerLine.frame.origin.x
         UIView.animate(withDuration: 1.0,
                        animations: { () -> Void in
-                        self.drawingPalletView.frame = CGRect(x: -331, y: 50, width: self.drawingPalletView.frame.width, height: self.drawingPalletView.frame.height)
+                        self.drawingPalletView.frame = CGRect(x: 0-self.view.frame.width+self.trailingTriggerLine.frame.width, y: self.drawingPalletView.frame.origin.y, width: self.drawingPalletView.frame.width, height: self.drawingPalletView.frame.height)
+                        self.trailingTriggerLine.frame = CGRect(x: 0, y: self.trailingTriggerLine.frame.origin.y, width: self.trailingTriggerLine.frame.width, height: self.trailingTriggerLine.frame.height)
         },
                        completion: { (animateToPlayer2Complete: Bool) -> Void in
                         if animateToPlayer2Complete {
+                          self.trailingTriggerLine.frame = CGRect(x: oldTrailingTriggerLineXValue, y: self.trailingTriggerLine.frame.minY, width: self.trailingTriggerLine.frame.width, height: self.trailingTriggerLine.frame.height)
                             self.nextPlayerButton.isHidden = true
                             self.completeButton.isHidden = false
                             self.trailingTriggerLine.isHidden = true

@@ -129,7 +129,6 @@
 				C87DBD4C22052C7B004E7DF9 /* DrawingCanvasView.h */,
 				C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */,
 				17D966052206531C00454739 /* AnimatedTransitioning.swift */,
-				1775BA982203A547000039DA /* DrawingCanvasView.swift */,
 				1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */,
 				1784D5332202BAA2003E10F8 /* AppDelegate.swift */,
 				1784D5372202BAA2003E10F8 /* Main.storyboard */,
@@ -412,7 +411,6 @@
 				17D96604220585C500454739 /* TitleSwipeViewController.swift in Sources */,
 				1775BA922203A1AB000039DA /* DrawingResultViewController.swift in Sources */,
 				17D966062206531C00454739 /* AnimatedTransitioning.swift in Sources */,
-				1775BA992203A547000039DA /* DrawingCanvasView.swift in Sources */,
 				1775BA972203A236000039DA /* PlayAreaViewController.swift in Sources */,
 				C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */,
 				1784D5342202BAA2003E10F8 /* AppDelegate.swift in Sources */,
@@ -600,7 +598,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRigh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DrawRight/DrawRight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -623,7 +621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRigh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewChan.DrawRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DrawRight/DrawRight-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
