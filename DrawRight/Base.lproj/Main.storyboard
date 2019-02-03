@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHw-tz-qQ0">
-    <device id="retina5_9" orientation="portrait">
+    <device id="ipad12_9rounded" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="playAreaViewController" id="BYZ-38-t0r" customClass="PlayAreaViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-fK-G8x">
-                                <rect key="frame" x="118" y="753" width="139" height="25"/>
+                                <rect key="frame" x="442.5" y="1311" width="139" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ZbS-cx-JgJ"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-a0-VLK" userLabel="Next Player Button">
-                                <rect key="frame" x="175" y="753" width="25" height="25"/>
+                                <rect key="frame" x="499.5" y="1311" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ORd-Tp-352"/>
                                     <constraint firstAttribute="width" constant="25" id="qu3-20-zLW"/>
@@ -42,18 +42,18 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-GX-L4D" userLabel="Drawing Pallet View" customClass="DrawingCanvasView">
-                                <rect key="frame" x="0.0" y="44" width="705" height="699"/>
+                                <rect key="frame" x="0.0" y="24" width="2003" height="1277"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Trailing Tigger Line">
-                                <rect key="frame" x="330" y="44" width="45" height="699"/>
+                                <rect key="frame" x="979" y="24" width="45" height="1277"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="y9g-xq-uhN"/>
                                 </constraints>
                             </view>
                             <view userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="An8-al-9dz" userLabel="Leading Tigger Line">
-                                <rect key="frame" x="0.0" y="44" width="45" height="699"/>
+                                <rect key="frame" x="0.0" y="24" width="45" height="1277"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="7On-8w-cOs"/>
@@ -70,8 +70,8 @@
                             <constraint firstItem="PsL-Ok-f3T" firstAttribute="height" secondItem="Qcx-GX-L4D" secondAttribute="height" id="cXP-bS-sV0"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egw-y0-Vv3"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gNz-6t-K6T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" id="iM3-oU-Vmg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" id="kGL-Ah-X6K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwn-a0-VLK" secondAttribute="bottom" constant="10" id="iM3-oU-Vmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaS-fK-G8x" secondAttribute="bottom" constant="10" id="kGL-Ah-X6K"/>
                             <constraint firstItem="An8-al-9dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qEn-ZK-lUh"/>
                             <constraint firstItem="An8-al-9dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0A-KC-7Y2"/>
                             <constraint firstItem="Qcx-GX-L4D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2" constant="-45" id="w8L-dL-2Jr"/>
@@ -97,17 +97,17 @@
             <objects>
                 <viewController id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvW-dZ-zOs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="464" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-5h-S1Z">
-                                <rect key="frame" x="0.0" y="93" width="375" height="350"/>
+                                <rect key="frame" x="0.0" y="-27" width="1024" height="955.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0d7-5h-S1Z" secondAttribute="height" multiplier="750:700" id="chO-YL-Fu7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-SZ-7ui" userLabel="Start over button">
-                                <rect key="frame" x="107" y="488" width="161" height="43"/>
+                                <rect key="frame" x="431.5" y="973.5" width="161" height="43"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
                                 <state key="normal" title="START OVER"/>
                                 <connections>
@@ -116,7 +116,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-Qv-pzB" userLabel="Save button">
-                                <rect key="frame" x="106" y="563" width="163" height="43"/>
+                                <rect key="frame" x="430.5" y="1048.5" width="163" height="43"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
                                 <state key="normal" title="SAVE PHOTO"/>
                             </button>
@@ -146,14 +146,14 @@
             <objects>
                 <viewController id="qHw-tz-qQ0" customClass="TitleSwipeViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAl-mP-l0Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-ka-pZn" userLabel="Begin Button Container View">
-                                <rect key="frame" x="0.0" y="44" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="24" width="1024" height="1272"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Begin Image" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-Rg-cLy" userLabel="Begin Image">
-                                        <rect key="frame" x="26" y="250" width="763" height="232"/>
+                                        <rect key="frame" x="350.5" y="541" width="763" height="232"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="232" id="C1t-s7-D9S"/>
                                             <constraint firstAttribute="width" constant="763" id="zvZ-5i-QOQ"/>
@@ -163,7 +163,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="690" id="kLf-1I-cl1"/>
                                     <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerX" secondItem="FYN-ka-pZn" secondAttribute="centerX" constant="220" id="yGM-BT-nKd"/>
                                     <constraint firstItem="1rg-Rg-cLy" firstAttribute="centerY" secondItem="FYN-ka-pZn" secondAttribute="centerY" constant="21" id="zMr-RV-6FO"/>
                                 </constraints>
@@ -177,6 +176,7 @@
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="leading" secondItem="uAl-mP-l0Z" secondAttribute="leading" id="1X6-Tz-Lug"/>
                             <constraint firstAttribute="trailing" secondItem="FYN-ka-pZn" secondAttribute="trailing" id="5f8-m0-ZQU"/>
                             <constraint firstItem="FYN-ka-pZn" firstAttribute="top" secondItem="lid-MR-tkE" secondAttribute="top" id="S6h-sO-Cu0"/>
+                            <constraint firstItem="lid-MR-tkE" firstAttribute="bottom" secondItem="FYN-ka-pZn" secondAttribute="bottom" constant="50" id="YvD-4c-Ue1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lid-MR-tkE"/>
                     </view>

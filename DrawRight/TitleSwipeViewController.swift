@@ -27,7 +27,7 @@ class TitleSwipeViewController: UIViewController {
             
             self.modalPresentationStyle = .custom
             self.present(viewControllerToPresent, animated: true, completion: {
-                print("animation done")
+//                print("animation done")
                 return
             })
         }
@@ -35,7 +35,7 @@ class TitleSwipeViewController: UIViewController {
         
         UIView.animate(withDuration: 1.0,
                        animations: { () -> Void in
-                        self.beginButtonContainterView.bounds = CGRect(x: 1100, y: 0, width: self.beginButtonContainterView.bounds.width, height: self.beginButtonContainterView.bounds.height)
+                        self.beginButtonContainterView.bounds = CGRect(x: 1120, y: 0, width: self.beginButtonContainterView.bounds.width, height: self.beginButtonContainterView.bounds.height)
         },
                        completion: { (animateComplete: Bool) -> Void in
                         if animateComplete {
