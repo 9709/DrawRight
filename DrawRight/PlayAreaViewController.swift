@@ -20,9 +20,12 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     @IBOutlet weak var trailingTriggerLine: UIView!
     
     @IBOutlet weak var leadingTriggerLine: UIView!
-    
+  
   @IBOutlet weak var playProgressTimer: UIProgressView!
   
+    @IBOutlet weak var subjectLabel: UILabel!
+    
+    var subject: String = ""
     
     
     override func viewDidLoad() {
@@ -34,7 +37,10 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
         self.leadingTriggerLine.isHidden = true
       
       self.playProgressTimer.progress = 0
-      
+        
+        let generateRandomSubjects = GenerateRandomSubjects ()
+        subject = generateRandomSubjects.generateSubject()
+        subjectLabel.text = subject
     }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +75,7 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     if segue.identifier == "toResultPageSegue" {
       if let destinationViewController = segue.destination as? DrawingResultViewController {
         destinationViewController.finishedImage = self.drawingPalletView.drawings()
+        destinationViewController.subjectDrawn = subject
       }
     }
   }
