@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, strong) UIColor *lineColor;
 
+@property (nonatomic, assign) BOOL transitionTriggered;
+
 - (UIImage *)drawings;
 
 @end

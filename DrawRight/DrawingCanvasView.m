@@ -49,8 +49,10 @@ const CGFloat kDefaultLineWidth = 10.0f;
   // set the default values for the public properties
   self.lineWidth = kDefaultLineWidth;
   
-  NSArray<UIColor*>* colors = @[UIColor.blueColor, UIColor.brownColor, UIColor.redColor, UIColor.yellowColor, UIColor.orangeColor, UIColor.greenColor, UIColor.blackColor, UIColor.purpleColor];
+  NSArray<UIColor*>* colors = @[UIColor.blueColor, UIColor.brownColor, UIColor.redColor,  UIColor.orangeColor, UIColor.greenColor, UIColor.blackColor, UIColor.purpleColor];
   self.lineColor = colors[arc4random_uniform((uint32_t)colors.count)];
+  
+  self.transitionTriggered = NO;
   
   // set the transparent background
   self.backgroundColor = UIColor.clearColor;
@@ -103,9 +105,16 @@ const CGFloat kDefaultLineWidth = 10.0f;
   // save all the touches in the path
   UITouch *touch = [touches anyObject];
   
-  previousPoint2 = previousPoint1;
-  previousPoint1 = [touch previousLocationInView:self];
-  currentPoint = [touch locationInView:self];
+  if(self.transitionTriggered) {
+    previousPoint1 = [touch previousLocationInView:self];
+    previousPoint2 = previousPoint1;
+    currentPoint = [touch locationInView:self];
+    self.transitionTriggered = NO;
+  } else {
+    previousPoint2 = previousPoint1;
+    previousPoint1 = [touch previousLocationInView:self];
+    currentPoint = [touch locationInView:self];
+  }
   
   [self addPathPreviousPreviousPoint:previousPoint2 withPreviousPoint:previousPoint1 withCurrentPoint:currentPoint];
   
