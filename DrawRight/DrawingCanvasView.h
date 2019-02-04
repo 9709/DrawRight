@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DrawingCanvasView : UIView
 
 @property (nonatomic, assign) CGFloat lineWidth;
+@property (nonatomic, strong) UIColor *lineColor;
 
 - (UIImage *)drawings;
 

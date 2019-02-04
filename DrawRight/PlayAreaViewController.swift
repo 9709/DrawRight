@@ -21,7 +21,8 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     
     @IBOutlet weak var leadingTriggerLine: UIView!
     
-    
+  @IBOutlet weak var playProgressTimer: UIProgressView!
+  
     
     
     override func viewDidLoad() {
@@ -31,7 +32,15 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
         
         self.completeButton.isHidden = true
         self.leadingTriggerLine.isHidden = true
+      
+      self.playProgressTimer.progress = 0
+      
     }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.startProgressTimer()
+  }
     
     
     @IBAction func nextPlayerArrowButton(_ sender: UIButton) {
@@ -71,5 +80,46 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
                 
         return animatedTransitioning
     }
+  
+  var currentPlayer = 0
+  
+  func startProgressTimer() {
+    self.playProgressTimer.progress = 1
+    UIView.animate(withDuration: 20.0, animations: {
+      self.playProgressTimer.layoutIfNeeded()
+    }, completion: { (complete: Bool) in
+      if self.currentPlayer < 1 {
+        self.moveToNextPlayer()
+      } else {
+        self.moveToResultScreen()
+      }
+    })
+  }
+  
+  func moveToResultScreen() {
+    self.performSegue(withIdentifier: "toResultPageSegue", sender: self)
+  }
+  
+  func moveToNextPlayer() {
+    let oldTrailingTriggerLineXValue = self.trailingTriggerLine.frame.origin.x
+    self.playProgressTimer.progress = 0
+    UIView.animate(withDuration: 1.0,
+                   animations: { () -> Void in
+                    self.drawingPalletView.frame = CGRect(x: 0-self.view.frame.width+self.trailingTriggerLine.frame.width, y: self.drawingPalletView.frame.origin.y, width: self.drawingPalletView.frame.width, height: self.drawingPalletView.frame.height)
+                    self.trailingTriggerLine.frame = CGRect(x: 0, y: self.trailingTriggerLine.frame.origin.y, width: self.trailingTriggerLine.frame.width, height: self.trailingTriggerLine.frame.height)
+                    self.playProgressTimer.layoutIfNeeded()
+    },
+                   completion: { (animateToPlayer2Complete: Bool) -> Void in
+                    if animateToPlayer2Complete {
+                      self.trailingTriggerLine.frame = CGRect(x: oldTrailingTriggerLineXValue, y: self.trailingTriggerLine.frame.minY, width: self.trailingTriggerLine.frame.width, height: self.trailingTriggerLine.frame.height)
+                      self.nextPlayerButton.isHidden = true
+                      self.completeButton.isHidden = false
+                      self.trailingTriggerLine.isHidden = true
+                      self.leadingTriggerLine.isHidden = false
+                      self.startProgressTimer()
+                      self.currentPlayer += 1
+                    }
+    })
+  }
 }
 

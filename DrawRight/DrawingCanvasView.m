@@ -49,6 +49,9 @@ const CGFloat kDefaultLineWidth = 10.0f;
   // set the default values for the public properties
   self.lineWidth = kDefaultLineWidth;
   
+  NSArray<UIColor*>* colors = @[UIColor.blueColor, UIColor.brownColor, UIColor.redColor, UIColor.yellowColor, UIColor.orangeColor, UIColor.greenColor, UIColor.blackColor, UIColor.purpleColor];
+  self.lineColor = colors[arc4random_uniform((uint32_t)colors.count)];
+  
   // set the transparent background
   self.backgroundColor = UIColor.clearColor;
   path = CGPathCreateMutable();
@@ -65,6 +68,7 @@ const CGFloat kDefaultLineWidth = 10.0f;
   CGContextAddPath(context, path);
   CGContextSetLineCap(context, kCGLineCapRound);
   CGContextSetLineWidth(context, self.lineWidth);
+  CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
   CGContextStrokePath(context);
 }
 
