@@ -21,7 +21,9 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     
     @IBOutlet weak var leadingTriggerLine: UIView!
     
+    @IBOutlet weak var subjectLabel: UILabel!
     
+    var subject: String = ""
     
     
     override func viewDidLoad() {
@@ -31,6 +33,10 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
         
         self.completeButton.isHidden = true
         self.leadingTriggerLine.isHidden = true
+        
+        let generateRandomSubjects = GenerateRandomSubjects ()
+        subject = generateRandomSubjects.generateSubject()
+        subjectLabel.text = subject
     }
     
     
@@ -60,6 +66,7 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     if segue.identifier == "toResultPageSegue" {
       if let destinationViewController = segue.destination as? DrawingResultViewController {
         destinationViewController.finishedImage = self.drawingPalletView.drawings()
+        destinationViewController.subjectDrawn = subject
       }
     }
   }
@@ -71,5 +78,6 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
                 
         return animatedTransitioning
     }
+    
 }
 
