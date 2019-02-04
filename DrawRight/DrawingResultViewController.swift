@@ -10,13 +10,13 @@ import UIKit
 
 class DrawingResultViewController: UIViewController, UIViewControllerTransitioningDelegate {
   
+    
     var finishedImage: UIImage?
     var subjectDrawn: String?
     
-  
+    
     @IBOutlet weak var finishedImageView: UIImageView!
     @IBOutlet weak var subjectLabel: UILabel!
-    
     
   
   override func viewDidLoad() {
@@ -36,4 +36,27 @@ class DrawingResultViewController: UIViewController, UIViewControllerTransitioni
     
     return animatedTransitioning
   }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Image saved to your Photo Library!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+
+    
+    @IBAction func savePhotoButton(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(finishedImage!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    
 }
+
+
+
