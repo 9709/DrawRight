@@ -81,13 +81,17 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
   
   func startProgressTimer() {
     playProgressTimer.progress = 1
-    
-    UIView.animate(withDuration: 20.0, delay: 0, options: UIView.AnimationOptions.curveLinear,
+
+    var delayTime = 20.0
+    if self.currentPlayer > 0 {
+      delayTime = 25.0
+    }
+    UIView.animate(withDuration: delayTime, delay: 0, options: UIView.AnimationOptions.curveLinear,
       animations: {
       self.playProgressTimer.layoutIfNeeded()
     })
     
-    progressTimer = Timer.scheduledTimer(withTimeInterval: 20.1, repeats: false, block: { (timer:Timer) in
+    progressTimer = Timer.scheduledTimer(withTimeInterval: delayTime + 0.1, repeats: false, block: { (timer:Timer) in
       if self.currentPlayer < 1 {
         self.moveToNextPlayer()
       } else {
