@@ -11,38 +11,38 @@ import UIKit
 
 
 class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDelegate  {
-    @IBOutlet weak var drawingPalletView: DrawingCanvasView!
-    
-    @IBOutlet weak var nextPlayerButton: UIButton!
-    
-    @IBOutlet weak var completeButton: UIButton!
-    
-    @IBOutlet weak var trailingTriggerLine: UIView!
-    
-    @IBOutlet weak var leadingTriggerLine: UIView!
+  @IBOutlet weak var drawingPalletView: DrawingCanvasView!
+  
+  @IBOutlet weak var nextPlayerButton: UIButton!
+  
+  @IBOutlet weak var completeButton: UIButton!
+  
+  @IBOutlet weak var trailingTriggerLine: UIView!
+  
+  @IBOutlet weak var leadingTriggerLine: UIView!
   
   @IBOutlet weak var playProgressTimer: UIProgressView!
   
-    @IBOutlet weak var subjectLabel: UILabel!
-    
-    var subject: String = ""
+  @IBOutlet weak var subjectLabel: UILabel!
+  
+  var subject: String = ""
   
   var progressTimer: Timer?
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.transitioningDelegate = self
-        
-        self.completeButton.isHidden = true
-        self.leadingTriggerLine.isHidden = true
-      
-      self.playProgressTimer.progress = 0
-        
-        let generateRandomSubjects = GenerateRandomSubjects ()
-        subject = generateRandomSubjects.generateSubject()
-        subjectLabel.text = subject
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.transitioningDelegate = self
+    
+    self.completeButton.isHidden = true
+    self.leadingTriggerLine.isHidden = true
+    
+    self.playProgressTimer.progress = 0
+    
+    let generateRandomSubjects = GenerateRandomSubjects ()
+    subject = generateRandomSubjects.generateSubject()
+    subjectLabel.text = subject
+  }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -52,18 +52,18 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
   
   @IBAction func subjectDoubleTapped(_ sender: Any) {
   }
-    
-    
-    @IBAction func nextPlayerArrowButton(_ sender: UIButton) {
-      playProgressTimer.layer.removeAllAnimations()
-      progressTimer?.invalidate()
-      moveToNextPlayer()
-    }
-    
-    // Complete button ================================
-    @IBAction func completeButton(_ sender: UIButton) {
-    }
-
+  
+  
+  @IBAction func nextPlayerArrowButton(_ sender: UIButton) {
+    playProgressTimer.layer.sublayers?.forEach { $0.removeAllAnimations() }
+    progressTimer?.invalidate()
+    moveToNextPlayer()
+  }
+  
+  // Complete button ================================
+  @IBAction func completeButton(_ sender: UIButton) {
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toResultPageSegue" {
       if let destinationViewController = segue.destination as? DrawingResultViewController {
@@ -72,27 +72,27 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
       }
     }
   }
+  
+  
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     
-
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
-                
-        return animatedTransitioning
-    }
+    let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
+    
+    return animatedTransitioning
+  }
   
   var currentPlayer = 0
   
   func startProgressTimer() {
     playProgressTimer.progress = 1
-
+    
     var delayTime = 20.0
     if self.currentPlayer > 0 {
       delayTime = 25.0
     }
-    UIView.animate(withDuration: delayTime, delay: 0, options: UIView.AnimationOptions.curveLinear,
-      animations: {
-      self.playProgressTimer.layoutIfNeeded()
+    UIView.animate(withDuration: delayTime, delay: 0, options: UIView.AnimationOptions.overrideInheritedDuration,
+                   animations: {
+                    self.playProgressTimer.layoutIfNeeded()
     })
     
     progressTimer = Timer.scheduledTimer(withTimeInterval: delayTime + 0.1, repeats: false, block: { (timer:Timer) in
