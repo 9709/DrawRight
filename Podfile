@@ -17,6 +17,5 @@ target 'DrawRight' do
     # Pods for testing
   end
 
-    pod 'ACEDrawingView'
 
 end

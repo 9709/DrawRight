@@ -195,7 +195,6 @@
 				1784D52C2202BAA2003E10F8 /* Sources */,
 				1784D52D2202BAA2003E10F8 /* Frameworks */,
 				1784D52E2202BAA2003E10F8 /* Resources */,
-				37D59F96F77B6A833527D8C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,28 +315,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37D59F96F77B6A833527D8C3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ACEDrawingView/ACEDrawingView.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACEDrawingView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3F747912730391E3F6B7BE63 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
