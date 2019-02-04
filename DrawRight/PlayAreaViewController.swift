@@ -90,8 +90,7 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     if self.currentPlayer > 0 {
       delayTime = 25.0
     }
-    UIView.animate(withDuration: delayTime, delay: 0, options: UIView.AnimationOptions.overrideInheritedDuration,
-                   animations: {
+    UIView.animate(withDuration: delayTime, animations: {
                     self.playProgressTimer.layoutIfNeeded()
     })
     
@@ -109,14 +108,15 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
   }
   
   func moveToNextPlayer() {
+    let transitionTime = 2.0
     let oldTrailingTriggerLineXValue = self.trailingTriggerLine.frame.origin.x
     UIApplication.shared.beginIgnoringInteractionEvents()
     self.drawingPalletView.transitionTriggered = true
-    Timer.scheduledTimer(withTimeInterval: 3.1, repeats: false, block: { (timer:Timer) in
+    Timer.scheduledTimer(withTimeInterval: transitionTime + 0.1, repeats: false, block: { (timer:Timer) in
       UIApplication.shared.endIgnoringInteractionEvents()
     })
     playProgressTimer.progress = 0
-    UIView.animate(withDuration: 3.0,
+    UIView.animate(withDuration: transitionTime,
                    animations: { () -> Void in
                     self.drawingPalletView.frame = CGRect(x: 0-self.view.frame.width+self.trailingTriggerLine.frame.width, y: self.drawingPalletView.frame.origin.y, width: self.drawingPalletView.frame.width, height: self.drawingPalletView.frame.height)
                     self.trailingTriggerLine.frame = CGRect(x: 0, y: self.trailingTriggerLine.frame.origin.y, width: self.trailingTriggerLine.frame.width, height: self.trailingTriggerLine.frame.height)
