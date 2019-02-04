@@ -8,30 +8,19 @@
 
 import UIKit
 
-class TitleSwipeViewController: UIViewController {
+class TitleSwipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var beginButtonContainterView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      self.transitioningDelegate = self
         
     }
     
     
     @IBAction func swipeTitleToStartGame(_ sender: UISwipeGestureRecognizer) {
-        
-        func slideOverTransition() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewControllerToPresent = storyboard.instantiateViewController(withIdentifier: "playAreaViewController")
-            
-            self.modalPresentationStyle = .custom
-            self.present(viewControllerToPresent, animated: true, completion: {
-//                print("animation done")
-                return
-            })
-        }
-        
         
         UIView.animate(withDuration: 1.0,
                        animations: { () -> Void in
@@ -39,9 +28,16 @@ class TitleSwipeViewController: UIViewController {
         },
                        completion: { (animateComplete: Bool) -> Void in
                         if animateComplete {
-                            slideOverTransition()
+                            self.performSegue(withIdentifier: "toPlayAreaFromTitleSegue", sender: self)
                         }
         })
     }
+  
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    
+    let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
+    
+    return animatedTransitioning
+  }
     
 }

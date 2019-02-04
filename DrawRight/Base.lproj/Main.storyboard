@@ -48,9 +48,13 @@
                             </view>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elephant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-qm-s3r">
                                 <rect key="frame" x="134.66666666666666" y="51.999999999999993" width="105.66666666666666" height="30.666666666666664"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.61245021609999994" blue="0.031678760299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aIf-d4-kco" appends="YES" id="mre-Ba-ABn"/>
+                                </connections>
                             </label>
                             <view userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-Ok-f3T" userLabel="Trailing Tigger Line">
                                 <rect key="frame" x="330" y="44" width="45" height="690"/>
@@ -108,13 +112,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="aIf-d4-kco">
+                    <connections>
+                        <action selector="subjectDoubleTapped:" destination="BYZ-38-t0r" id="1eW-du-ziT"/>
+                        <segue destination="qHw-tz-qQ0" kind="show" identifier="toTitlePageSegue" id="L9j-Oh-GXZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1052" y="117.48768472906404"/>
         </scene>
         <!--Drawing Result View Controller-->
         <scene sceneID="bKG-SG-Gch">
             <objects>
-                <viewController id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="drawingResultViewController" id="ut4-Hr-RAK" customClass="DrawingResultViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvW-dZ-zOs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +186,7 @@
         <!--Title Swipe View Controller-->
         <scene sceneID="Zul-cO-0TJ">
             <objects>
-                <viewController id="qHw-tz-qQ0" customClass="TitleSwipeViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="titlePageViewController" id="qHw-tz-qQ0" customClass="TitleSwipeViewController" customModule="DrawRight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAl-mP-l0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +224,7 @@
                     </view>
                     <connections>
                         <outlet property="beginButtonContainterView" destination="FYN-ka-pZn" id="Qhj-NQ-7jV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toPlayAreaFromTitleSegue" id="5vc-wt-mOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv3-p4-DKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,6 +242,6 @@
         <image name="Next Player Arrow" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qdr-Yc-gvD"/>
+        <segue reference="5vc-wt-mOg"/>
     </inferredMetricsTieBreakers>
 </document>

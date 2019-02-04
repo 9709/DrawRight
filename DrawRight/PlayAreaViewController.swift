@@ -28,7 +28,7 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
     var subject: String = ""
   
   var progressTimer: Timer?
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +47,10 @@ class PlayAreaViewController: UIViewController, UIViewControllerTransitioningDel
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     startProgressTimer()
+  }
+  
+  
+  @IBAction func subjectDoubleTapped(_ sender: Any) {
   }
     
     

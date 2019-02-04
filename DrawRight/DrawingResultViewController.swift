@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawingResultViewController: UIViewController {
+class DrawingResultViewController: UIViewController, UIViewControllerTransitioningDelegate {
   
     var finishedImage: UIImage?
     var subjectDrawn: String?
@@ -21,6 +21,8 @@ class DrawingResultViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.transitioningDelegate = self
+    
     finishedImageView.image = finishedImage
     subjectLabel.text = subjectDrawn
   }
@@ -28,4 +30,10 @@ class DrawingResultViewController: UIViewController {
   @IBAction func startOverButton(_ sender: UIButton) {
   }
   
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    
+    let animatedTransitioning = AnimatedTransitioning(phoneHeight: self.view.frame.height, phoneWidth: self.view.frame.width)
+    
+    return animatedTransitioning
+  }
 }
