@@ -10,7 +10,7 @@ where the first player will have to draw into.  Anything drawn within the indica
 as the screen will pan over and cover whatever the first player has drawn.  
 Each turns are timed, so both players will only have a limited time to complete their half of the drawing.  
 
-Finally, both halves of the drawing will merge, and the work will be presented.  There will also be an option to save the final drawing your Photo Library.
+Finally, both halves of the drawing will merge, and the work will be presented.  There will also be an option to save the final drawing to your iPhone Photo Library.
 
 DrawRight is designed to be a quick pick-up and play type of game.  Ideal for ice breaker events, parties, 
 team building or simply playing on the bus. 
