@@ -30,7 +30,7 @@ team building or simply playing on the bus.
 
 ### Tech Stack
 
-- Swift, Obj-C, UIKit
+- Swift, Obj-C, UIKit, Core Graphics
 
 
 ### Future Goals
