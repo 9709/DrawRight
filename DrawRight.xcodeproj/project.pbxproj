@@ -21,7 +21,6 @@
 		17D966062206531C00454739 /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D966052206531C00454739 /* AnimatedTransitioning.swift */; };
 		C49455275473455449C0DE91 /* Pods_DrawRightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAEBE07EC3CA88E546A225C /* Pods_DrawRightTests.framework */; };
 		C87DBD4E22052C7B004E7DF9 /* DrawingCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */; };
-		CF43C524DC27652070737AC6 /* Pods_DrawRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FE14BF119E401B5C7E7A33D /* Pods-DrawRight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRight.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight.release.xcconfig"; sourceTree = "<group>"; };
-		11D76448C1D92EE2F8E3846A /* Pods-DrawRightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightUITests/Pods-DrawRightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1775BA8B2203A1AB000039DA /* DrawingResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingResultViewController.swift; sourceTree = "<group>"; };
 		1775BA962203A236000039DA /* PlayAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAreaViewController.swift; sourceTree = "<group>"; };
 		1784D5302202BAA2003E10F8 /* DrawRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,19 +55,15 @@
 		1784D54F2202BAA3003E10F8 /* DrawRightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawRightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1784D5532202BAA3003E10F8 /* DrawRightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRightUITests.swift; sourceTree = "<group>"; };
 		1784D5552202BAA3003E10F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17AEBFFC749EA9284DFEF21B /* Pods-DrawRightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightUITests/Pods-DrawRightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		17CFB7E72207C251001EA8B6 /* GenerateRandomSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomSubjects.swift; sourceTree = "<group>"; };
 		17D96603220585C500454739 /* TitleSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSwipeViewController.swift; sourceTree = "<group>"; };
 		17D966052206531C00454739 /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		2EC2B93F2D196858BF1DC519 /* Pods_DrawRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C9731FD83CEFE5527CA46EA /* Pods-DrawRightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightTests/Pods-DrawRightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B8C4A604B4E52C384B4C3E /* Pods_DrawRightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87DBD4B22052C7A004E7DF9 /* DrawRight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawRight-Bridging-Header.h"; sourceTree = "<group>"; };
 		C87DBD4C22052C7B004E7DF9 /* DrawingCanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingCanvasView.h; sourceTree = "<group>"; };
 		C87DBD4D22052C7B004E7DF9 /* DrawingCanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvasView.m; sourceTree = "<group>"; };
 		DAAEBE07EC3CA88E546A225C /* Pods_DrawRightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawRightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4201057F930D0D5EC499AC7 /* Pods-DrawRight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRight/Pods-DrawRight.debug.xcconfig"; sourceTree = "<group>"; };
-		F0D0EC91E01D556E5102C664 /* Pods-DrawRightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawRightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawRightTests/Pods-DrawRightTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF43C524DC27652070737AC6 /* Pods_DrawRight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +100,6 @@
 				1784D5472202BAA3003E10F8 /* DrawRightTests */,
 				1784D5522202BAA3003E10F8 /* DrawRightUITests */,
 				1784D5312202BAA2003E10F8 /* Products */,
-				C0F80076B61B4F51F88B25E1 /* Pods */,
 				BD9B960822E114F43075B71D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -171,19 +162,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0F80076B61B4F51F88B25E1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E4201057F930D0D5EC499AC7 /* Pods-DrawRight.debug.xcconfig */,
-				0FE14BF119E401B5C7E7A33D /* Pods-DrawRight.release.xcconfig */,
-				7C9731FD83CEFE5527CA46EA /* Pods-DrawRightTests.debug.xcconfig */,
-				F0D0EC91E01D556E5102C664 /* Pods-DrawRightTests.release.xcconfig */,
-				17AEBFFC749EA9284DFEF21B /* Pods-DrawRightUITests.debug.xcconfig */,
-				11D76448C1D92EE2F8E3846A /* Pods-DrawRightUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,7 +169,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1784D5582202BAA3003E10F8 /* Build configuration list for PBXNativeTarget "DrawRight" */;
 			buildPhases = (
-				3F747912730391E3F6B7BE63 /* [CP] Check Pods Manifest.lock */,
 				1784D52C2202BAA2003E10F8 /* Sources */,
 				1784D52D2202BAA2003E10F8 /* Frameworks */,
 				1784D52E2202BAA2003E10F8 /* Resources */,
@@ -315,28 +292,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F747912730391E3F6B7BE63 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrawRight-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		952A6A5766F880F56C2AB6EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,12 +522,11 @@
 		};
 		1784D5592202BAA3003E10F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4201057F930D0D5EC499AC7 /* Pods-DrawRight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3GKR9NFG3;
+				DEVELOPMENT_TEAM = 9X7754242C;
 				INFOPLIST_FILE = DrawRight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -590,12 +544,11 @@
 		};
 		1784D55A2202BAA3003E10F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FE14BF119E401B5C7E7A33D /* Pods-DrawRight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3GKR9NFG3;
+				DEVELOPMENT_TEAM = 9X7754242C;
 				INFOPLIST_FILE = DrawRight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,7 +565,6 @@
 		};
 		1784D55C2202BAA3003E10F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9731FD83CEFE5527CA46EA /* Pods-DrawRightTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -634,7 +586,6 @@
 		};
 		1784D55D2202BAA3003E10F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0D0EC91E01D556E5102C664 /* Pods-DrawRightTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -656,7 +607,6 @@
 		};
 		1784D55F2202BAA3003E10F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17AEBFFC749EA9284DFEF21B /* Pods-DrawRightUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -677,7 +627,6 @@
 		};
 		1784D5602202BAA3003E10F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11D76448C1D92EE2F8E3846A /* Pods-DrawRightUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
